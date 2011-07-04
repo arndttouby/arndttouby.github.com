@@ -1,3 +1,658 @@
 <html>
-<h1>Arndt Touby</h1>
+  <head>
+    <style type="text/css">
+
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.text-right {
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.xxsmall {
+    font-size: 10px;
+}
+.xsmall {
+    font-size: 11px;
+}
+.small {
+    font-size: 12px;
+}
+.normal {
+    font-size: 14px;
+}
+.big {
+    font-size: 16px;
+}
+.black {
+    color: #000;
+}
+.strong {
+    font-weight: bold;
+}
+.float {
+    float: left;
+}
+.right {
+    float: right;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.absolute-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+body {
+    background: #232522;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #b6b6b6;
+    font-size: 14px;
+}
+a {
+    color: #ddd;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+a.reverse {
+    text-decoration: none;
+}
+a.reverse:hover {
+    text-decoration: underline;
+}
+.no-ul {
+    text-decoration: none
+}
+.no-ul:hover {
+    text-decoration: underline !important
+}
+p, ol, ul {
+    margin: 10px 0px;
+}
+
+h1,h2,h3,.about-details {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light",Arial,Helvetica,sans-serif;
+}
+
+/* -- terrible browser hacks -- */
+select {
+    min-width: 1.5em;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.header {
+    background: #2a2a2a;
+    border-bottom: solid 1px #1e1e1e;
+    display: block;
+    height: 139px;
+    overflow: hidden;
+}
+
+.header table {
+    height: 129px;
+    width: 100%;
+    border-spacing: 0;
+}
+
+.header td.text-right {
+    padding-left: 10px;
+}
+
+h1,h2,h3,h4 {
+    font-weight: normal;
+}
+
+h1 {
+    color: #575757;
+    font-size: 40px;
+    letter-spacing: -.3px;
+}
+
+h1 a {
+    color: #575757;
+    text-decoration: none;
+}
+h1 a:hover {
+    color: #575757;
+}
+
+h2 {
+    color: #d6d6d6;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+h2 a {
+    color: #d6d6d6;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #A98E2E;
+}
+
+h3 {
+    color: #444;
+    font-size: 20px;
+}
+
+.posterousPrivateBox {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.posterousPrivateBox a {
+    text-decoration: none;
+}
+
+.posterousPrivateBox a:hover {
+    text-decoration: underline;
+}
+
+.posterousPrivateBox div {
+    margin: 10px !important;
+}
+
+#posts {
+    float: left;
+    margin-top: 10px;
+    width: 500px;
+}
+
+.back-to-blog {
+    margin-top: 10px;
+}
+
+.back-to-blog a {
+    color: #A98E2E;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-to-blog a:hover {
+    text-decoration: underline;
+}
+
+.postunit {
+    clear: both;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+}
+
+ul.mini_commands a {
+    text-decoration: none;
+}
+
+ul.mini_commands a:hover {
+    text-decoration: underline;
+}
+
+.sms_notice {
+    background: #2A2A2A;
+    padding: 5px 10px;
+}
+
+.post {
+    line-height: 1.3em;
+}
+
+.post p, .post pre, .post blockquote { margin: 15px 0px; }
+.post ol { margin: 15px 0px 15px 20px;}
+.post ul { margin: 15px 0px 15px 15px;}
+
+
+/* gallery */
+
+.galleryLabel {
+    color: #676767;
+}
+
+.infobar {
+    background: #2a2a2a;
+    color: #5a5f57;
+    min-height: 15px;
+    height: auto !important;
+    height: 15px;
+    margin: 10px -8px;
+    padding: 5px 10px;
+}
+
+.infobar .location {
+    display: block !important;
+    font-size: 11px;
+    float: left;
+}
+
+.infobar .location a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.infobar .location a:hover {
+    text-decoration: underline;
+}
+
+.infobar .details {
+    float: right;
+    font-size: 9px;
+    margin-top: 1px;
+}
+
+.infobar .details img {
+    vertical-align: middle;
+}
+
+.date-comments {
+    padding-left: 10px;
+}
+
+div.commentunit textarea {
+    width: 490px !important;
+}
+div.commentunit textarea.twitterBox {
+    width: 450px !important;
+}
+form div.commentunit { margin-top: 0px !important; margin-bottom: 0px !important; }
+
+.infobar .posted,.infobar .comments-name {
+    color: #776421;
+}
+
+.infobar a.timestamp,.infobar .comments-quantity {
+    color: #A98E2E;
+}
+
+.comment-area {
+    clear: left;
+}
+
+.infobar .comment_list {
+    display: inline !important;
+}
+
+.comment,.commentunit {
+    color: #aaa;
+    margin: 0px -8px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+div.comment_label { 
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+
+.commentunit {
+    background: #2A2A2A;
+    border-bottom: solid 5px #232522;
+    padding: 5px 8px !important;
+    width: auto !important;
+}
+
+.commentname a {
+    text-decoration: none !important;
+}
+.comment_none_yet_msg { 
+    font-size: 10px;
+    font-weight: normal;
+    margin-top: 5px !important;
+}
+.commentname a:hover {
+    text-decoration: underline !important;
+}
+
+.comment h4 {
+    margin: 0 !important;
+}
+
+.posterousAddNewComment .commentunit {
+    border-bottom: none !important;
+}
+
+.comment ul.mini_commands {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.comment ul.mini_commands li {
+    margin: 0px 10px 0px 0px;
+}
+
+
+.comment_value label {
+    margin-right: 10px;
+}
+.comment_value br {
+    display: none;
+}
+
+.infobar .details a {
+    text-decoration: none;
+}
+
+.infobar .details a:hover {
+    text-decoration: underline;
+}
+
+.location-map {
+    background: #2A2A2A;
+    margin: 5px -8px;
+    padding: 8px;
+}
+
+.map {
+    float: left;
+    height: 150px;
+    width: 300px;
+}
+
+.location-details {
+    color: #ccc;
+    float: right;
+    width: 187px;
+    font-size: 11px;
+}
+
+.private-post a.tooltip_link:hover span {
+    background: #2a2a2a;
+    color: #b6b6b6;
+    width: 300px !important;
+}
+
+.private-post a.tooltip_link:hover span b {
+    color: #b6b6b6;
+}
+
+.search-section {
+    background: #2a2a2a;
+    padding: 20px;
+}
+
+.pagination {
+    color: #676767;
+    margin-bottom: 50px;
+    font-size: 11px;
+}
+
+.pagination span {
+    position: relative;
+    top: 2px;
+}
+
+.pagination a {
+    display: inline-block;
+    display: -moz-inline-box;
+    padding: 2px 6px;
+    background: #444;
+    border: solid 1px #555;
+    color: #ccc;
+}
+
+.pagination a:hover {
+    background: #555;
+    border: solid 1px #333;
+    color: #ddd;
+}
+
+.pagination .disabled {
+    color: #676767;
+    padding: 2px 6px;   
+}
+
+.pagination .current {
+    color: #676767;
+    font-weight: bold;
+    padding: 2px 6px;   
+}
+
+.pagination a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+#sidebar {
+    float: right;
+    margin-top: 35px;
+    width: 410px;
+}
+
+.about {
+    overflow: auto;
+    margin-bottom: 25px;
+}
+
+.about-details {
+    line-height: 1.3em;
+    margin-left: 85px;
+    width: 320px;
+}
+
+.about-details h4 a {
+    color: #9b9b9b;
+    font-size: 14px;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+
+.about-details h4 a:hover {
+    color: #A98E2E;
+}
+
+.about-details p {
+    color: #515151;
+    margin: 0 0 10px;
+}
+
+.about-details a {
+    color: #515151;
+}
+
+.sidebar-block {
+    margin-bottom: 10px;
+}
+
+h5 {
+    color: #bebebe;
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.tags_and_links {
+    float: left;
+    width: 230px;
+}
+
+.tags_and_links ul {
+    margin: 0;
+    padding-top: 7px;
+    margin-bottom: 20px;
+}
+
+#more-tags-listing ul {
+    margin: 0;
+}
+
+.tags_and_links ul li,#more-tags-listing li,.taglist li {
+    color: #4c4c4c;
+    font-size: 10px;
+    list-style: none;
+    margin: 0;
+    vertical-align: top;
+}
+
+.taglist ul {
+    margin: 0 !important;
+}
+
+.tags_and_links ul li a,#more-tags-listing li a,.taglist li a {
+    color: #818181;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 7px;
+    text-decoration: none;
+}
+
+.tags_and_links ul li a:hover,#more-tags-listing li a:hover,.taglist li a:hover {
+    text-decoration: underline;
+}
+
+a.more-tags {
+    color: #A98E2E !important;
+    font-size: 10px !important;
+    text-decoration: none;
+}
+
+a.more-tags:hover {
+    text-decoration: underline;
+}
+
+li.tag_item_selected {
+    color: #ddd;
+    font-size: 12px;
+    padding-bottom: 7px;
+}
+
+div.archives {
+    color: #4c4c4c;
+    font-size: 10px;
+    list-style: none;
+    margin: 0;
+    vertical-align: top;
+}
+
+div.archives a {
+    color: #818181;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 7px;
+    text-decoration: none;
+}
+
+div.archives a:hover { text-decoration: underline;}
+h2#archive_list {margin-top: 0px; color: #4c4c4c;}
+div.archives {display:block;}
+div.archives div.inner {margin-left:10px;} 
+div.archives div.archive_list {padding-top:7px;}
+
+.tools {
+    float: right;
+    width: 180px;
+}
+
+.search {
+    background: url(/images/icons/search-dark.gif) no-repeat 3px 2px #5f605e;
+    border: 0;
+    color: #424341;
+    font-size: 11px;
+    margin-bottom: 2px;
+    padding: 5px 5px 5px 20px;
+    width: 155px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.search:focus {
+    color: #ddd;
+}
+
+.contributors, .fans {
+    margin: 10px 0;
+}
+ul.contribs, ul.contribs { margin: 5px 0px; }
+ul.contribs li, ul.fans li {
+    list-style: none;
+}
+ul.contribs li, ul.fans li, ul.contribs li a, ul.fans li a {
+    font-size: 11px;    
+    color: #818181;
+}
+a img.profile_border, img.profile_border { border: none; margin-right: 3px;}
+
+ul.contribs li img, ul.fans li img {
+    vertical-align: middle;
+}
+
+#subscribe_div {
+    margin-bottom: 3px;
+}
+.subscribe-link {
+    color: #666;
+    font-size: 11px;
+    padding: 2px 0px 0px 20px;
+    line-height: 20px; 
+    position: relative;
+    top: -2px;
+
+}
+.subscribe-site {
+    background: url(/images/favicon.png) no-repeat -1px -1px;
+  padding: 2px 0px 0px 20px;
+    min-height: 20px;
+    margin: 3px 0px;    
+    font-size: 11px;
+    color: #666;
+}
+.subscribe-site div a { color: #666; text-decoration: none; }
+.subscribe-rss {
+    background: url(/images/feed-icon-14x14.png) no-repeat -1px;
+    height: 16px;
+    margin: 3px 0px;    
+    padding-bottom: 3px;
+}
+.subscribe-rss { text-decoration: none; }
+
+.editbox { visibility: hidden; position: absolute; top: -10px; }
+.postunit:hover .editbox { visibility: visible; }
+.sidebarunit { margin: 20px 0px;}
+.metricLabel { font-size: 10px; color: #666; }
+.metricValue { font-size: 10px; color: #999; font-weight: bold; }
+div.profile_ajax_reply { padding-left: 20px; }
+.posterous_retweet_widget a { text-decoration: none; }
+.posterous_retweet_widget .posterous_retweet { background-color: #555; color: #999; }
+.posterous_retweet_widget a.posterous_retweet:hover { color: #fff; }
+
+.navigation { background: #222425; border-bottom: 1px solid #1e1e1e; }
+.navigation ul { padding: 10px 0; }
+.navigation li { list-style: none; padding-right: 20px; display: inline; }
+.navigation li a { color: #818181; text-decoration: none; font-size: 14px; text-shadow: #000 0 1px 0; -webkit-transition: color 0.2s; -moz-transition: color 0.2s; transition: color 0.2s; }
+.navigation li a:hover{ color: #A98E2E; }
+.navigation li a.current { color: #b6b6b6; }
+
+.sharing { padding: 5px 5px 5px 0; }
+.posterous_tweet_button, .posterous_fb_like_widget { float: left; display: inline; margin-right: 15px; }
+
+</style>
+  </head>
+  <body>
+    <h1>Arndt Touby</h1>
+  </body>
 </html>
